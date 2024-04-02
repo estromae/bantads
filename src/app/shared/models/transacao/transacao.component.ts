@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import {
   MatDialog,
   MAT_DIALOG_DATA,
@@ -34,12 +34,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   styleUrl: './transacao.component.css',
 })
 export class TransacaoComponent {
+
+  @Input() modalTitle?: string;
+  transactionAmount?: number;
+
+  
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(TransacaoComponent);
+  closeModal(): void {
   }
 
-  onConfirm() {}
-  onClose() {}
+  performTransaction(): void {
+  }
 }
