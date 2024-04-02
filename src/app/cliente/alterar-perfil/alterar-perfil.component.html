@@ -1,0 +1,152 @@
+<div id="opcoes" class="container">
+
+    <!--Título-->
+    <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+    </svg>
+    Perfil</h1>
+
+                   
+    <!--formulario-->
+    <form class="row" action="../../cliente/tela-inicial-cliente/tela-inicial-cliente.html" method="post">    
+        <!--Nome-->
+        <div class="form-group col-6">
+            <label>Nome</label>
+            <input type="text" class="form-control" placeholder="Nome"
+            name="nome"
+            [(ngModel)]="client.nome"
+            required>
+        </div>
+
+        <!--CPF-->
+        <div class="form-group col-6">
+            <label>CPF</label>
+            <input type="text" class="form-control" placeholder="CPF" disabled
+            name="cpf"
+            [(ngModel)]="client.cpf"
+            >
+        </div>
+
+        <!--Email-->
+        <div class="form-group col-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email" required
+            name="email"
+            [(ngModel)]="client.email"
+            >
+        </div>
+        
+        <!--Telefone-->
+        <div class="form-group col-6">
+            <label>Telefone</label>
+            <input type="text" class="form-control" placeholder="Telefone" required
+            name="telefone"
+            [(ngModel)]="client.telefone"
+            >
+        </div>
+
+        <!--Endereço-->
+        <div class="form-group col-6">
+            <label for="inputState">Tipo</label>
+            <select id="inputState" class="form-control"
+            name="tipo"
+            [(ngModel)]="address.tipo"
+            >
+                <option selected>Rua</option>
+                <option>Avenida</option>
+                <option>outros...</option>
+            </select>
+        </div>
+
+        <!--Logadouro-->
+        <div class="form-group col-6">
+            <label>Logadouro</label>
+            <input type="text" class="form-control" placeholder="Logadouro" required
+            name="logradouro"
+            [(ngModel)]="address.logradouro"
+            >
+        </div>
+
+        <!--Número-->
+        <div class="form-group col-6">
+            <label>Número</label>
+            <input type="number" class="form-control" placeholder="Número" required
+            name="numero"
+            [(ngModel)]="address.numero"
+            >
+        </div>
+
+        <!--Complemento-->
+        <div class="form-group col-6">
+            <label>Complemento</label>
+            <input type="text" class="form-control" placeholder="Complemento" required
+            name="complemento"
+            [(ngModel)]="address.complemento"
+            >
+        </div>
+
+        <!--CEP-->
+        <div class="form-group col-6">
+            <label>CEP</label>
+            <input type="text" class="form-control" placeholder="CEP" required
+            name="CEP"
+            [(ngModel)]="address.CEP"
+            >
+        </div>
+
+        <!--Estado-->
+        <div class="form-group col-2">
+            <label>Estado</label>
+            <input type="text" class="form-control" placeholder="Estado" required
+            name=""
+            [(ngModel)]="address.estado"
+            >
+        </div>
+
+        <!--Cidade-->
+        <div class="form-group col-4">
+            <label>Cidade</label>
+            <input type="text" class="form-control" placeholder="Cidade" required
+            name=""
+            [(ngModel)]="address.cidade"
+            >
+        </div>
+
+        <!--Saldo-->
+        <div class="form-group col-6">
+            <label>Saldo</label>
+            <input type="number" class="form-control" placeholder="R$" required
+            name="saldo"
+            [(ngModel)]="client.salario"
+            >
+        </div>
+
+        <!--Senha-->
+        <div class="form-group col-6">
+            <label>Senha</label>
+            <input type="password" class="form-control" placeholder="Senha" required
+            name="senha"
+            [(ngModel)]="client.senha"
+            >
+        </div>
+
+        <!--Gerente-->
+        <div class="form-group col-6">
+            <label>Gerente</label>
+            <input type="text" class="form-control" placeholder="Nome do gerente" disabled>
+        </div>
+
+        <!--Alterar-->
+        <div class="form-group col-1">
+            <a href="../../cliente/tela-inicial-cliente/tela-inicial-cliente.html">
+                <button type="submit" class="btn btn-primary" (click)="submitUpdate()">Alterar</button>
+            </a>
+        </div>
+        
+        <!--Cancelar-->
+        <div class="form-group col-1">
+            <a href="../tela-inicial-cliente/tela-inicial-cliente.html"><button type="button"  class="btn btn-outline-secondary">Cancelar</button></a>
+        </div>
+    </form>
+</div>
