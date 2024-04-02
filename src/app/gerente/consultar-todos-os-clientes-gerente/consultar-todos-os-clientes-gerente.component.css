@@ -1,0 +1,31 @@
+body{
+    background-color: #f1f3f3 !important;
+  }
+  
+  #caixa-gerente h1{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #414141;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #caixa-gerente table{
+    border-radius: 50px;
+  }
+  
+  #caixa-pesquisa{
+    background-color: rgba(255, 255, 255, 0.882);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(164, 164, 164, 0.5);
+  }
+  
+  #caixa-tabela{
+    background-color: rgba(255, 255, 255, 0.882);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(164, 164, 164, 0.5);
+  }
