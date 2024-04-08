@@ -1,0 +1,107 @@
+<!--gerente-->
+<div id="caixa-gerente" class="container">
+    <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+    </svg>
+    Consultar cliente</h1>
+
+    <!--Consultar cliente-->
+    <div id="caixa-pesquisa" class="container">
+        <!-- Pesquisa -->
+        <form action="" class="row">
+            <div class="col-10">
+                <label>CPF</label>
+                <input type="text" class="form-control" placeholder="000.000.000-00" required="">
+            </div>
+            <div class="col-2">
+                <button type="submit" class=" btn btn-primary">Pesquisar</button> 
+            </div>
+        </form>  
+    </div>
+
+    <div id="caixa-informacoes-cliente">
+        <form class="row" action="../../cliente/tela-inicial-cliente/tela-inicial-cliente.html" method="post">    
+            <!--Nome-->
+            <div class="form-group col-6">
+                <label>{{ cliente.name }}</label>
+                <input type="text" class="form-control" placeholder="Nome" disabled>
+            </div>
+
+            <!--CPF-->
+            <div class="form-group col-6">
+                <label>{{ cliente.cpf }}</label>
+                <input type="text" class="form-control" placeholder="CPF" disabled>
+            </div>
+
+            <!--Email-->
+            <div class="form-group col-6">
+                <label>{{ cliente.email }}</label>
+                <input type="email" class="form-control" placeholder="Email" disabled>
+            </div>
+            
+            <!--Telefone-->
+            <div class="form-group col-6">
+                <label>{{ cliente.telefone }}</label>
+                <input type="text" class="form-control" placeholder="Telefone" disabled>
+            </div>
+
+            <!--Endereço-->
+            <div class="form-group col-6">
+                <label for="inputState">{{ cliente.tipo }}</label>
+                <input type="text" class="form-control" placeholder="Tipo" disabled>
+            </div>
+
+            <!--Logadouro-->
+            <div class="form-group col-6">
+                <label>{{ cliente.logadouro }}</label>
+                <input type="text" class="form-control" placeholder="Logadouro" disabled>
+            </div>
+
+            <!--Número-->
+            <div class="form-group col-6">
+                <label>{{ cliente.numero }}</label>
+                <input type="number" class="form-control" placeholder="Número" disabled>
+            </div>
+
+            <!--Complemento-->
+            <div class="form-group col-6">
+                <label>{{ cliente.complemento }}</label>
+                <input type="text" class="form-control" placeholder="Complemento" disabled>
+            </div>
+
+            <!--CEP-->
+            <div class="form-group col-6">
+                <label>{{ cliente.cep }}</label>
+                <input type="text" class="form-control" placeholder="CEP" disabled>
+            </div>
+
+            <!--Estado-->
+            <div class="form-group col-2">
+                <label>{{ cliente.estado }}</label>
+                <input type="text" class="form-control" placeholder="Estado" disabled>
+            </div>
+
+            <!--Cidade-->
+            <div class="form-group col-4">
+                <label>{{ cliente.cidade }}</label>
+                <input type="text" class="form-control" placeholder="Cidade" disabled>
+            </div>
+
+            <!--Saldo-->
+            <div class="form-group col-6">
+                <label>{{ cliente.saldo }}</label>
+                <input type="number" class="form-control" placeholder="R$" disabled>
+            </div>
+
+            <!--Gerente-->
+            <div class="form-group col-6">
+                <label>{{ cliente.gerente }}</label>
+                <input type="text" class="form-control" placeholder="Nome do gerente" disabled>
+            </div>
+        </form>
+
+            </tbody>
+        </table>
+    </div>
+</div>
