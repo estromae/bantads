@@ -3,7 +3,7 @@
   --------------------------------------*/
 
 
-  header{
+  nav{
     top: 0;
     left: 0;
     width: 100%;
@@ -15,7 +15,7 @@
     backdrop-filter: blur(50px);
   }
   
-  header .logo{
+  .logo{
     font-size: 40px;
     color: #e1b918;
     font-family: 'Courier New', monospace;
