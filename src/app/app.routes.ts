@@ -5,20 +5,24 @@ import { LoginComponent } from './autenticacao/login/login.component';
 import { AlterarPerfilComponent } from './cliente/alterar-perfil/alterar-perfil.component';
 
 export const routes: Routes = [
-    {
-        path: "telainicial",
-        component: TelaInicialComponent,
-    },
-    {
-        path: "autocadastro",
-        component: AutocadastroComponent
-    },
-    {
-        path: "login",
-        component: LoginComponent
-    },
-    {
-        path: "alterar-perfil",
-        component: AlterarPerfilComponent
-    }
+  {
+    path: 'telainicial',
+    component: TelaInicialComponent,
+  },
+  {
+    path: 'autocadastro',
+    component: AutocadastroComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'cliente',
+    component: TelaInicialComponent,
+  },
+  {
+    path: "alterar-perfil",
+    component: AlterarPerfilComponent
+  }
 ];
