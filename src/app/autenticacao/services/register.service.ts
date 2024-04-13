@@ -21,7 +21,7 @@ export class RegisterService {
       nome: client.nome,
       email: client.email,
       cpf: client.cpf,
-      endereco: address.endereco,
+      endereco: address.tipo,
       telefone: client.telefone,
       salario: client.salario
     }

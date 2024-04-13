@@ -3,6 +3,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from '../services/login.service';
 import { Router, RouterLink } from '@angular/router';
 import { autenticacao } from '../../shared/models/autenticacao.model';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { autenticacao } from '../../shared/models/autenticacao.model';
   imports: [
     ReactiveFormsModule,
     FormsModule,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   providers: [
     LoginService

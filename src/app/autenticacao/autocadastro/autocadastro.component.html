@@ -13,7 +13,13 @@
             <input type="text" class="form-control" placeholder="Nome"
             name="nome"
             [(ngModel)]="client.nome"
+            #nameInput="ngModel"
             required>
+            <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="text-danger">
+                <div *ngIf="nameInput.errors?.['required']">
+                    Nome é obrigatório
+                </div>
+            </div>
         </div>
 
         <!--CPF-->
@@ -22,7 +28,17 @@
             <input type="text" class="form-control" placeholder="CPF" 
             name="cpf"
             [(ngModel)]="client.cpf"
+            #cpfInput="ngModel"
+            pattern="\d{3}\d{3}\d{3}\d{2}"
             required>
+            <div *ngIf="cpfInput.invalid && (cpfInput.dirty || cpfInput.touched)" class="text-danger">
+                <div *ngIf="cpfInput.errors?.['required']">
+                    CPF é obrigatório
+                </div>
+                <div *ngIf="cpfInput.errors?.['pattern']">
+                    Por favor, insira um CPF válido
+                </div>
+            </div>
         </div>
 
         <!--Email-->
@@ -31,7 +47,17 @@
             <input type="email" class="form-control" placeholder="Email" 
             name="email"
             [(ngModel)]="client.email"
+            #emailInput="ngModel"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             required>
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="text-danger">
+                <div *ngIf="emailInput.errors?.['required']">
+                    Email é obrigatório
+                </div>
+                <div *ngIf="emailInput?.errors?.['pattern']">
+                    Por favor, insira um email válido
+                </div>
+            </div>
         </div>
         
         <!--Telefone-->
@@ -40,17 +66,32 @@
             <input type="text" class="form-control" placeholder="Telefone" 
             name="telefone"
             [(ngModel)]="client.telefone"
+            #telefoneInput="ngModel"
+            pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
             required>
+            <div *ngIf="telefoneInput.invalid && (telefoneInput.dirty || telefoneInput.touched)" class="text-danger">
+                <div *ngIf="telefoneInput.errors?.['required']">
+                    Telefone é obrigatório
+                </div>
+                <div *ngIf="telefoneInput.errors?.['pattern']">
+                    Por favor, insira um telefone válido no formato (XX) XXXX-XXXX
+                </div>
+            </div>
         </div>
 
-        <!--Endereço-->
+        <!--Tipo-->
         <div class="form-group col-6">
             <label for="inputState">Tipo</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control" name="tipo" [(ngModel)]="address.tipo" #endereco="ngModel">
                 <option selected>Rua</option>
                 <option>Avenida</option>
                 <option>outros...</option>
             </select>
+            <div *ngIf="endereco.invalid && (endereco.dirty || endereco.touched)" class="text-danger">
+                <div *ngIf="endereco.errors?.['required']">
+                    Por favor, selecione um tipo de endereço
+                </div>
+            </div>
         </div>
 
         <!--Logadouro-->
@@ -59,7 +100,13 @@
             <input type="text" class="form-control" placeholder="Logadouro" 
             name="logradouro"
             [(ngModel)]="address.logradouro"
+            #logradouroInput="ngModel"
             required>
+            <div *ngIf="logradouroInput.invalid && (logradouroInput.dirty || logradouroInput.touched)" class="text-danger">
+                <div *ngIf="logradouroInput.errors?.['required']">
+                    Logradouro é obrigatório.
+                </div>
+            </div>
         </div>
 
         <!--Número-->
@@ -68,7 +115,13 @@
             <input type="number" class="form-control" placeholder="Número" 
             name="numero"
             [(ngModel)]="address.numero"
+            #numeroInput="ngModel"
             required>
+            <div *ngIf="numeroInput.invalid && (numeroInput.dirty || numeroInput.touched)" class="text-danger">
+                <div *ngIf="numeroInput.errors?.['required']">
+                    Número é obrigatório
+                </div>
+            </div>
         </div>
 
         <!--Complemento-->
@@ -86,7 +139,17 @@
             <input type="text" class="form-control" placeholder="CEP" 
             name="cep"
             [(ngModel)]="address.CEP"
+            #cepInput="ngModel"
+            pattern="\d{5}\d{3}"
             required>
+            <div *ngIf="cepInput.invalid && (cepInput.dirty || cepInput.touched)" class="text-danger">
+                <div *ngIf="cepInput.errors?.['required']">
+                    CEP é obrigatório
+                </div>
+                <div *ngIf="cepInput.errors?.['pattern']">
+                    Por favor, insira um CEP válido
+                </div>
+            </div>
         </div>
 
         <!--Estado-->
@@ -95,7 +158,13 @@
             <input type="text" class="form-control" placeholder="Estado" 
             name="estado"
             [(ngModel)]="address.estado"
+            #estadoInput="ngModel"
             required>
+            <div *ngIf="estadoInput.invalid && (estadoInput.dirty || estadoInput.touched)" class="text-danger">
+                <div *ngIf="estadoInput.errors?.['required']">
+                    Estado é obrigatório
+                </div>
+            </div>
         </div>
 
         <!--Cidade-->
@@ -104,7 +173,13 @@
             <input type="text" class="form-control" placeholder="Cidade" 
             name="cidade"
             [(ngModel)]="address.cidade"
+            #cidadeInput="ngModel"
             required>
+            <div *ngIf="cidadeInput.invalid && (cidadeInput.dirty || cidadeInput.touched)" class="text-danger">
+                <div *ngIf="cidadeInput.errors?.['required']">
+                    Cidade é obrigatória
+                </div>
+            </div>
         </div>
 
         <!--Salario-->
@@ -113,7 +188,13 @@
             <input type="number" class="form-control" placeholder="R$" 
             name="Salario"
             [(ngModel)]="client.salario"
+            #salarioInput="ngModel"
             required>
+            <div *ngIf="salarioInput.invalid && (salarioInput.dirty || salarioInput.touched)" class="text-danger">
+                <div *ngIf="salarioInput.errors?.['required']">
+                    Salário é obrigatório
+                </div>
+            </div>
         </div>
 
         <!--Senha-->
@@ -122,7 +203,13 @@
             <input type="password" class="form-control" placeholder="Senha" 
             name="senha"
             [(ngModel)]="client.senha"
+            #senhaInput="ngModel"
             required>
+            <div *ngIf="senhaInput.invalid && (senhaInput.dirty || senhaInput.touched)" class="text-danger">
+                <div *ngIf="senhaInput.errors?.['required']">
+                    Senha é obrigatória
+                </div>
+            </div>
         </div>
 
         <!--Cadastrar-->

@@ -4,6 +4,7 @@ import { RegisterService } from '../services/register.service';
 import { Cliente } from '../../shared/models/cliente.model';
 import { Router, RouterLink } from '@angular/router';
 import { Endereco } from '../../shared/models/endereco.model';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-autocadastro',
@@ -11,7 +12,8 @@ import { Endereco } from '../../shared/models/endereco.model';
   imports: [
     ReactiveFormsModule,
     FormsModule,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   providers: [
     RegisterService
