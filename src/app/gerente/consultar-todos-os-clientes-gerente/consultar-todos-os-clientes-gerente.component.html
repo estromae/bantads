@@ -7,17 +7,17 @@
     
     <div id="caixa-pesquisa" class="container" >
         <!-- Pesquisa -->
-        <form action="" class="row" [formGroup]="ClientForms">
+        <form action="" class="row" [formGroup]="ClientForms" (submit)="submit()">
             <div class="col-5">
-                <label>CPF</label>
-                <input type="text" class="form-control" placeholder="000.000.000-00" formControlName="cpf">
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" class="form-control" placeholder="000.000.000-00" formControlName="cpf">
             </div>
             <div class="col-5">
-                <label>Nome</label>
-                <input type="text" class="form-control" placeholder="Nome" formControlName="nome">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" class="form-control" placeholder="Nome" formControlName="nome">
             </div>
             <div class="col-2">
-                <button type="submit" class=" btn btn-primary" (submit)="submit()">Pesquisar</button> 
+                <button type="submit" class=" btn btn-primary">Pesquisar</button> 
             </div>
         </form>  
     </div>
@@ -38,8 +38,8 @@
                     <th scope="col">Estado</th>
                 </tr>
                 </thead>
-                <tbody>                      
-                    @for (cliente of clientes; track cliente.id) {
+                <tbody>                   
+                    @for (cliente of clientesPesquisados; track cliente.id) {
                     <tr>
                         <td>{{ cliente.id }}</td>
                         <td>{{ cliente.cpf }}</td>
@@ -48,11 +48,11 @@
                         <td>{{ cliente.cidade }}</td>
                         <td>{{ cliente.estado }}</td>
                     </tr>
+                    
                     } @empty {
                         <p>Não há nenhum cliente cadastrado no sistema ainda</p>
                     }
-                    
-                </tbody>
+                </tbody>        
         </table>
     </div>
 </div>
