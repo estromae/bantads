@@ -7,12 +7,12 @@
     Consultar cliente</h1>
 
     <!--Consultar cliente-->
-    <div id="caixa-pesquisa" class="container">
+    <div id="caixa-pesquisa" class="container" [formGroup]="ClientForms" (submit)="submit()">
         <!-- Pesquisa -->
         <form action="" class="row">
             <div class="col-10">
-                <label>CPF</label>
-                <input type="text" class="form-control" placeholder="000.000.000-00" required="">
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" class="form-control" placeholder="000.000.000-00" formControlName="cpf">
             </div>
             <div class="col-2">
                 <button type="submit" class=" btn btn-primary">Pesquisar</button> 
@@ -21,87 +21,85 @@
     </div>
 
     <div id="caixa-informacoes-cliente">
-        <form class="row" action="../../cliente/tela-inicial-cliente/tela-inicial-cliente.html" method="post">    
+        <form class="row" action="../../cliente/tela-inicial-cliente/tela-inicial-cliente.html" method="post">
+
             <!--Nome-->
             <div class="form-group col-6">
-                <label>{{ cliente.name }}</label>
-                <input type="text" class="form-control" placeholder="Nome" disabled>
+                <label>Nome</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.name }}" disabled>
             </div>
 
             <!--CPF-->
             <div class="form-group col-6">
-                <label>{{ cliente.cpf }}</label>
-                <input type="text" class="form-control" placeholder="CPF" disabled>
+                <label>CPF</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.cpf }}" disabled>
             </div>
 
             <!--Email-->
             <div class="form-group col-6">
-                <label>{{ cliente.email }}</label>
-                <input type="email" class="form-control" placeholder="Email" disabled>
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="{{ cliente.email }}" disabled>
             </div>
             
             <!--Telefone-->
             <div class="form-group col-6">
-                <label>{{ cliente.telefone }}</label>
-                <input type="text" class="form-control" placeholder="Telefone" disabled>
+                <label>Telefone</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.telefone }}" disabled>
             </div>
 
             <!--Endereço-->
             <div class="form-group col-6">
-                <label for="inputState">{{ cliente.tipo }}</label>
-                <input type="text" class="form-control" placeholder="Tipo" disabled>
+                <label for="inputState">Tipo</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.tipo }}" disabled>
             </div>
 
             <!--Logadouro-->
             <div class="form-group col-6">
-                <label>{{ cliente.logadouro }}</label>
-                <input type="text" class="form-control" placeholder="Logadouro" disabled>
+                <label>logadouro</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.logadouro }}" disabled>
             </div>
 
             <!--Número-->
             <div class="form-group col-6">
-                <label>{{ cliente.numero }}</label>
-                <input type="number" class="form-control" placeholder="Número" disabled>
+                <label>Número</label>
+                <input type="number" class="form-control" placeholder="{{ cliente.numero }}" disabled>
             </div>
 
             <!--Complemento-->
             <div class="form-group col-6">
-                <label>{{ cliente.complemento }}</label>
-                <input type="text" class="form-control" placeholder="Complemento" disabled>
+                <label>Complemento</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.complemento }}" disabled>
             </div>
 
             <!--CEP-->
             <div class="form-group col-6">
-                <label>{{ cliente.cep }}</label>
-                <input type="text" class="form-control" placeholder="CEP" disabled>
+                <label>CEP</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.cep }}" disabled>
             </div>
 
             <!--Estado-->
             <div class="form-group col-2">
-                <label>{{ cliente.estado }}</label>
-                <input type="text" class="form-control" placeholder="Estado" disabled>
+                <label>Estado</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.estado }}" disabled>
             </div>
 
             <!--Cidade-->
             <div class="form-group col-4">
-                <label>{{ cliente.cidade }}</label>
-                <input type="text" class="form-control" placeholder="Cidade" disabled>
+                <label>Cidade</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.cidade }}" disabled>
             </div>
 
             <!--Saldo-->
             <div class="form-group col-6">
-                <label>{{ cliente.saldo }}</label>
-                <input type="number" class="form-control" placeholder="R$" disabled>
+                <label>Saldo</label>
+                <input type="number" class="form-control" placeholder="{{ cliente.saldo }}" disabled>
             </div>
 
             <!--Gerente-->
             <div class="form-group col-6">
-                <label>{{ cliente.gerente }}</label>
-                <input type="text" class="form-control" placeholder="Nome do gerente" disabled>
+                <label>Nome do gerente</label>
+                <input type="text" class="form-control" placeholder="{{ cliente.gerente }}" disabled>
             </div>
         </form>
-
-            </tbody>
-        </table>
     </div>
 </div>
