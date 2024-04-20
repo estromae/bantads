@@ -2,17 +2,18 @@
             Cadastro
   --------------------------------------*/
 
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #cadastro{
-    background-color: rgba(240, 248, 255, 0.882);
-    border-radius: 20px;
-    width: 800px;
-    padding: 15px;
+  margin-top: 2%;
+  background-color: rgba(240, 248, 255, 0.882);
+  border-radius: 20px;
+  width: 800px;
+  padding: 15px;
 }
 
 #cadastro input{

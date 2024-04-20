@@ -3,6 +3,7 @@ import { TelaInicialComponent } from './Cliente/tela-inicial/tela-inicial.compon
 import { TelaInicialGerenteComponent } from './gerente/tela-inicial-gerente/tela-inicial-gerente.component';
 import { AutocadastroComponent } from './autenticacao/autocadastro/autocadastro.component';
 import { LoginComponent } from './autenticacao/login/login.component';
+import { AlterarPerfilComponent } from './cliente/alterar-perfil/alterar-perfil.component';
 import { ConsultarClienteComponent } from './gerente/consultar-cliente/consultar-cliente.component';
 import { ConsultarTodosOsClientesGerenteComponent } from './gerente/consultar-todos-os-clientes-gerente/consultar-todos-os-clientes-gerente.component';
 
@@ -24,4 +25,8 @@ export const routes: Routes = [
     path: 'cliente',
     component: TelaInicialComponent,
   },
+  {
+    path: "alterar-perfil",
+    component: AlterarPerfilComponent
+  }
 ];

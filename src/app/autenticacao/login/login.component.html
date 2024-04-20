@@ -16,13 +16,26 @@
                 <input type="email" class="form-control" placeholder="Email" 
                 name="email"
                 [(ngModel)]="auth.login"
+                #loginInput="ngModel"
                 required>
+                <div *ngIf="loginInput.touched" class="text-danger">
+                    <div *ngIf="loginInput.errors?.['required']">
+                        Login é obrigatório
+                    </div>
+                </div>
                 <!--Senha-->
                 <label>Senha</label>
                 <input type="password" class="form-control" placeholder="Senha" 
                 name="senha"
                 [(ngModel)]="auth.senha"
+                #senhaInput="ngModel"
                 required>
+                <div *ngIf="senhaInput.touched" class="text-danger">
+                    <div *ngIf="senhaInput.errors?.['required']">
+                        Senha é obrigatória
+                    </div>
+                </div>
+
                 <!--Entrar-->
                 <button type="button" class="btn btn-primary" (click)="submitLogin()">Entrar</button>
                 <!--Cadastrar-->
