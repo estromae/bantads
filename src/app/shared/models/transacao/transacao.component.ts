@@ -1,13 +1,5 @@
-import { Component, Inject, Input } from '@angular/core';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
-} from '@angular/material/dialog';
+import { Component, Inject, Injectable, Input } from '@angular/core';
+import { MatDialog,  MatDialogModule} from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -19,12 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     FormsModule,
     MatButtonModule,
-    MatDialogTitle,
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogClose,
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
@@ -32,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   templateUrl: './transacao.component.html',
   styleUrl: './transacao.component.css',
+  providers: [MatDialog]
 })
 export class TransacaoComponent {
 

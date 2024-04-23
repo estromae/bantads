@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';  
+import { Routes } from '@angular/router';
 import { TelaInicialGerenteComponent } from './gerente/tela-inicial-gerente/tela-inicial-gerente.component';
 import { AutocadastroComponent } from './autenticacao/autocadastro/autocadastro.component';
 import { LoginComponent } from './autenticacao/login/login.component';
